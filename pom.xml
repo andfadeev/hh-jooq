@@ -76,11 +76,29 @@
                                 <database>
                                     <name>org.jooq.util.postgres.PostgresDatabase</name>
                                     <inputSchema>public</inputSchema>
-                                    <includes>.*</includes>
+                                    <!--<includes>.*</includes>-->
+                                    <includes>
+                                        bank_money_payment_type|
+                                        account|
+                                        service|
+                                        bill|
+                                        billing_template|
+                                        deed|
+                                        price_rate|
+                                        employer_service|
+                                        payment|
+                                        payer|
+                                        sync_log_2|
+                                        currency|
+                                        site|
+                                        billing_setting
+                                    </includes>
                                     <excludes>bt_page_stats</excludes>
                                 </database>
                                 <generate>
                                     <javaTimeTypes>true</javaTimeTypes>
+                                    <generatedAnnotation>false</generatedAnnotation>
+                                    <immutablePojos>true</immutablePojos>
                                 </generate>
                                 <target>
                                     <packageName>ru.hh.jooq</packageName>
